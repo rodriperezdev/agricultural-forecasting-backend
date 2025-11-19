@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pandas
+numpy
+torch
+prophet
+yfinance
+requests
+scikit-learn
+joblib

@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+.DS_Store
+.vscode/
+*.db
+*.sqlite3
+# Large model files
+*.pth
+*.pt
+*.pkl
+*.h5
