@@ -60,7 +60,7 @@ async def get_forecast(commodity: str, model_type: str = "prophet", periods: int
             forecast_result = model.predict(periods=periods)
         elif model_type == "lstm":
             model = LSTMForecaster()
-            model.train(df, epochs=5) # Low epochs for demo speed
+            model.train(df, epochs=2) # Reduced epochs for faster response on free tier
             forecast_result = model.predict(df, future_periods=periods)
         else:
             raise HTTPException(status_code=400, detail="Invalid model type")
