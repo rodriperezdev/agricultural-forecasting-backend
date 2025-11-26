@@ -25,9 +25,17 @@ app.add_middleware(
 async def root():
     return {"message": "Agricultural Commodity Price Forecasting API is running"}
 
+@app.head("/")
+async def root_head():
+    return {}
+
 @app.get("/health")
 async def health_check():
     return {"status": "healthy"}
+
+@app.head("/health")
+async def health_check_head():
+    return {}
 
 from models import ProphetModel, LSTMForecaster
 from data_loader import DataLoader
